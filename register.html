@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Register
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="#"><img src="logo.jpeg" width="150"></a>
+            </div>
+            <h1>VACCINE REGISTRATION</h1>
+            <div class="nav_side">
+                <a href="index.html">Home</a>
+                <a class="active" href="register.html">Register</a>
+                <a href="support.html">Support Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+        <div class="register_form">
+            <form name="submit-sheet" method="POST">
+               <br> <h2>REGISTER</h2><br><br>
+                NAME: <input type="text" name="Username"  placeholder="Full Name" pattern="[A-Za-z]{3-30}" required><br><br>
+                D.O.B: <input type="date" name="birthday"><br><br>
+                AGE: <input type="number" min="18" max="90" name="age" placeholder="Age" min="5" max="80"><br><br>
+               <fun> GENDER: </fun> <center>
+                <input type="radio" name="gender" value="Male" checked>Male<br>
+                <input type="radio" name="gender" value="Female">Female<br>
+                <input type="radio" name="gender" value="Other">Other<br><br>
+                      </center>
+                EMAIL: <input type="email" name="email" placeholder="Email"><br><br>
+                PHONE.NO: <input type="text" name="number" value="+91" placeholder="Contact Number" pattern="+[0-9]{10}" required><br><br>
+                AADHAR.NO: <input type="number" name="aadhar" placeholder="Aadhar number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required><br><br>
+                DOSE.NO: <input type="radio" name="dose" value="dose1" checked>1ST DOSE
+                         <input type="radio" name="dose" value="dose2">2ND DOSE<br><br>
+                HOSPITAL:<select name="hospital" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
+                            <option value="none" selected>SELECT HOSPITAL</option>
+                            <option value="gvt.hospital,arialur" >gvt.hospital,arialur</option>
+                            <option value="gvt.hospital,bhavani">gvt.hospital,bhavani</option>
+                            <option value="pgvt.hospital,cuddalore">gvt.hospital,cuddalore</option>
+                            <option value="gvt.hospital,dindigul">gvt.hospital,dindigul</option>
+                            <option value="gvt.hospital,erode">gvt.hospital,erode</option>
+                            <option value="gvt.hospital,gobi">gvt.hospital,gobi</option>
+                            <option value="gvt.hospital,hosur">gvt.hospital,hosur</option>
+                            <option value="gvt.hospital,imbur">gvt.hospital,imbur</option>
+                            <option value="gvt.hospital,jodambu">gvt.hospital,jodambur</option>
+                            <option value="gvt.hospital,kodaikanal">gvt.hospital,kodaikanal</option>
+                            <option value="gvt.hospital,lukyankotai">gvt.hospital,lukyankotai</option>
+                            <option value="gvt.hospital,madurai">gvt.hospital,madurai</option>
+                            <option value="gvt.hospital,natham">gvt.hospital,natham</option>
+                            <option value="gvt.hospital,oddanchatram">gvt.hospital,oddanchatram</option>
+                            <option value="gvt.hospital,perambalur">gvt.hospital,perambalur</option>
+                            <option value="gvt.hospital,salem">gvt.hospital,salem</option>
+                            <option value="gvt.hospital,vellore">gvt.hospital,vellore</option>
+                            <option value="gvt.hospital,tiruchy">gvt.hospital,tiruchy</option>
+                            <option value="gvt.hospital,vanampaakam">gvt.hospital,vanampaakam</option>
+                        </select><br><br>
+                VACCINE:<select name="vaccine" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
+                    <option value="none" selected>SELECT VACCINE</option>
+                    <option value="COVID SHIELD" >COVID SHIELD</option>
+                    <option value="CO VAXINE" >COVAXINE</option>
+                </select><br><br>
+                ADDRESS: <textarea name="address" rows="6" cols="40" placeholder="Enter Your Address"></textarea><br><br>
+                DATE OF APPOINMENT: <input type="date" name="appoinment"><br>
+                T&C: <input type="radio" name="TC" value="YES" checked><br>I herby accept the term and conditions and i will cooperate with that in any case&nbsp<b>YES</b><br>
+                &emsp;<input type="radio" name="TC" value="NO"><br>I'm not willing to aacept my terms and condtion and i will pay fine&nbsp<b>NO</b><br>
+                <button type="submit">REGISTER</button>
+                <button type="reset">RESET</button>
+            </form>
+            <script type="text/javascript">
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxPRejnEp-nLCsnf1rt9kHWwgbVte1iIxhM0ItbFykWoDTW2chvdUCPLo0YPxbqTm-0/exec'
+            const form = document.forms['submit-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Registering, Your Vaccine Registered Successfully"))
+                .catch(error => console.error('Error!', error.message))
+            })
+            </script>
+        </div>
