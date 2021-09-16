@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-             <style > 
+            
     header{
         position:sticky;
         background-color:rgb(32, 31, 31);
@@ -16,7 +16,7 @@
         text-align: center;
         border-style: solid;
         background-color: whitesmoke;
-        width: 97%;
+        width: 80%;
     }
     
         h1{
@@ -28,7 +28,7 @@
         top: 4px;
         left: 15px;
     }
-    profile{
+    .profile{
         position: absolute;
         top: 7px;
         right:20px;
@@ -59,7 +59,7 @@
         display: table;
         margin:0 auto;
     }
-    para{
+    .para{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         
     }
@@ -108,32 +108,61 @@
             <h1>VACCINE REGISTRATION</h1>
             <div class="nav_side">
                 <a href="index.html">Home</a>
-                <a href="login.html">Register</a>
+                <div class="dropdown">
+                    <a href="#">Register</a>
+                    <div class="dropdown-content">
+                      <a href="login.html">Login</a>
+                      <a href="register.html">Register</a>
+                    </div>
+                  </div>
                 <a class="active" href="support.html">Support Us</a>
                 <a href="contact.html">Contact Us</a>
             </div>
         </nav>
         <div class="register_form">    
-<form>
-    
-    <para>FULL NAME        </para>
-        <input type="text" name="fname" placeholder="full name"pattern="[A-Za-z]*" autofocus required><br><br>
-        <para>MOBILE NO(10 digit with country code)  </para>
-        <input type="tel" name="phone" value="+91" pattern="+[0-9]{10}"maxlength="13" required><br><br>
-        <para>EMAIL-ID</para>
-        <input type="email" name="email"placeholder="xyz@gmail.com" required><br><br>
-        <para>AMOUNT WISH TO DONATE  </para>
-        <input type="teL" name="amount" required><br><br>
+<form style="width: 80%;">
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;FULL NAME   <input style="display: inline;
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="text" name="Username"  placeholder="Full Name" pattern="[A-Za-z]{3-30}" required><br><br>
+ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;PH.NO&emsp;&emsp;&emsp; <input style="display: inline;
+ width:38%;
+ margin: 10px;
+ padding: 5px;
+ border-radius: 5px;
+ border: none;
+ outline: none;
+ border-left: 5px solid orangered;" type="text" name="Username"  placeholder="+91" pattern="{3-10}" required><br><br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;EMAIL&emsp;&emsp; &emsp;<input style="display: inline;
+  width:38%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border-left: 5px solid orangered;" type="text" name="Username"  placeholder="abc@gmail.com" pattern="[A-Za-z]{3-30}" required><br><br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; AMOUNT&emsp;&emsp;<input style="display: inline;
+   width:38%;
+   margin: 10px;
+   padding: 5px;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   border-left: 5px solid orangered;" type="text" name="Username"  placeholder="Amount you wish to donate" pattern="{0-100000}" required><br><br>
 
-        <button type="submit">DONATE</button>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <button type="submit">DONATE</button>
                 <button type="reset">RESET</button>
         <br>
-       <p style="color: red;text-align: center;"> <i>  THANK  YOU FOR YOUR DONATION,
+       <p style="color: red;text-align: center;"> <i> &emsp;&emsp;&emsp; THANK  YOU FOR YOUR DONATION,
            IT SAVES LIFE
        </i></p><br>
        <div class="back"> 
-        <a href="index.html"><back> BACK</back></a>
-        </div>
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  <a href="index.html"><back> BACK</back></a>
+        </div><br><br>
 </div>
 </form>
 </div>
