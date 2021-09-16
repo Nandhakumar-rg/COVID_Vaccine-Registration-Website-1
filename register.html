@@ -16,28 +16,88 @@
             <h1>VACCINE REGISTRATION</h1>
             <div class="nav_side">
                 <a href="index.html">Home</a>
-                <a class="active" href="register.html">Register</a>
+                <div class="dropdown">
+                    <a  class="active" href="#">Register</a>
+                    <div class="dropdown-content">
+                      <a href="login.html">Login</a>
+                      <a href="register.html">Register</a>
+                    </div>
+                  </div>
                 <a href="support.html">Support Us</a>
                 <a href="contact.html">Contact Us</a>
             </div>
         </nav>
         <div class="register_form">
             <form name="submit-sheet" method="POST">
-               <br> <h2>REGISTER</h2><br><br>
-                NAME: <input type="text" name="Username"  placeholder="Full Name" pattern="[A-Za-z]{3-30}" required><br><br>
-                D.O.B: <input type="date" name="birthday"><br><br>
-                AGE: <input type="number" min="18" max="90" name="age" placeholder="Age" min="5" max="80"><br><br>
-               <fun> GENDER: </fun> <center>
-                <input type="radio" name="gender" value="Male" checked>Male<br>
-                <input type="radio" name="gender" value="Female">Female<br>
-                <input type="radio" name="gender" value="Other">Other<br><br>
-                      </center>
-                EMAIL: <input type="email" name="email" placeholder="Email"><br><br>
-                PHONE.NO: <input type="text" name="number" value="+91" placeholder="Contact Number" pattern="+[0-9]{10}" required><br><br>
-                AADHAR.NO: <input type="number" name="aadhar" placeholder="Aadhar number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required><br><br>
-                DOSE.NO: <input type="radio" name="dose" value="dose1" checked>1ST DOSE
+               <br> <h2 style="text-align: center;">REGISTER</h2><br><br>
+               &emsp;&emsp; NAME: <input style="display: inline;
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="text" name="Username"  placeholder="Full Name" pattern="[A-Za-z]{3-30}" required>
+                &emsp;D.O.B: &emsp;&emsp;<input style="
+                width:30%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="date" name="birthday"><br><br>
+               &emsp;&emsp; AGE:&emsp; <input style="display: inline;
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="number" min="18" max="90" name="age" placeholder="Age" min="5" max="80">
+            
+            &emsp; GENDER: <div class="gender">
+               <input type="radio" id="html" name="gender" value="Male">
+                 <label for="html">Male</label>
+                 <input type="radio" id="css" name="gender" value="Female">
+                 <label for="css">Female</label>
+                 <input type="radio" id="javascript" name="gender" value="Other">
+                 <label for="javascript">Other</label>
+                       </div><br><br>
+                      
+                       &emsp;&emsp; EMAIL: <input style="display: inline;
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="email" name="email" placeholder="Email">
+               &emsp; PHONE.NO: <input style="display: inline;
+                width:30%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="text" name="number" value="+91" placeholder="Contact Number" pattern="+[0-9]{10}" max="10" required><br><br>
+               &emsp;&emsp; AADHAR: <input style="display: inline;
+                width:37%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="number" name="aadhar" placeholder="Aadhar number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+               &emsp; DOSE.NO: <input type="radio" name="dose" value="dose1" checked>1ST DOSE
                          <input type="radio" name="dose" value="dose2">2ND DOSE<br><br>
-                HOSPITAL:<select name="hospital" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
+                         &emsp;&emsp;HOSPITAL:<select name="hospital" style="display: inline;
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
                             <option value="none" selected>SELECT HOSPITAL</option>
                             <option value="gvt.hospital,arialur" >gvt.hospital,arialur</option>
                             <option value="gvt.hospital,bhavani">gvt.hospital,bhavani</option>
@@ -58,17 +118,39 @@
                             <option value="gvt.hospital,vellore">gvt.hospital,vellore</option>
                             <option value="gvt.hospital,tiruchy">gvt.hospital,tiruchy</option>
                             <option value="gvt.hospital,vanampaakam">gvt.hospital,vanampaakam</option>
-                        </select><br><br>
-                VACCINE:<select name="vaccine" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
+                        </select>
+                        &emsp; VACCINE:<select style="display: inline;
+                width:30%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" name="vaccine" onfocus='this.size=5' onblur='this.size=1;' onchange='this.size=1; this.blur();'required >
                     <option value="none" selected>SELECT VACCINE</option>
                     <option value="COVID SHIELD" >COVID SHIELD</option>
                     <option value="CO VAXINE" >COVAXINE</option>
                 </select><br><br>
-                ADDRESS: <textarea name="address" rows="6" cols="40" placeholder="Enter Your Address"></textarea><br><br>
-                DATE OF APPOINMENT: <input type="date" name="appoinment"><br>
-                T&C: <input type="radio" name="TC" value="YES" checked><br>I herby accept the term and conditions and i will cooperate with that in any case&nbsp<b>YES</b><br>
-                &emsp;<input type="radio" name="TC" value="NO"><br>I'm not willing to aacept my terms and condtion and i will pay fine&nbsp<b>NO</b><br>
-                <button type="submit">REGISTER</button>
+                &emsp;&emsp; ADDRESS: <textarea style="
+                width:38%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" name="address" rows="6" cols="30" placeholder="Enter Your Address"></textarea>
+                DATE OF APPOINMENT: <input style="display: inline;
+                width:15%;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                border-left: 5px solid orangered;" type="date" name="appoinment"><br>
+               &emsp;&emsp; T&C: <input type="radio" name="TC" value="YES" checked>I herby accept the term and conditions and i will cooperate with that in any case&nbsp<b>YES</b><br><br>
+               &emsp;&emsp; &emsp; &emsp;<input type="radio" name="TC" value="NO">I'm not willing to aacept my terms and condtion and i will pay fine&nbsp<b>NO</b><br>
+                
+               &emsp;&emsp; &emsp;&emsp;  &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="submit">REGISTER</button>
                 <button type="reset">RESET</button>
             </form>
             <script type="text/javascript">
